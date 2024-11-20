@@ -17,7 +17,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
-
+\usepackage{wrapfig}
 
 
 \title{Exploring Virtualization Efficiency, Security Enhancements, and Scripting for File and Operating Systems\thanks{CM2134 Assesment}}
@@ -36,26 +36,31 @@
 
 \maketitle
 
-\begin{abstract}
-\ldots
-The gaming industry is one of the fastest-growing markets in the world. With rapid improvement in game development, there is no doubt that the computing power requirement keeps rising. With that comes new growing energy expenses. Virtualization and performance have been in the eyes of researchers for years. This paper dives into the cost, energy efficiency and security of virtualizations for ACME Games. This includes examples of File Scripting and Operating System Scripting with adherence to proper coding ethics and security.
+%\begin{abstract}
+%\ldots
+%The gaming industry is one of the fastest-growing markets in the world. With rapid improvement in game development, there is no doubt that the computing %power requirement keeps rising. With that comes new growing energy expenses. Virtualization and performance have been in the eyes of researchers for years. %This paper dives into the cost, energy efficiency and security of virtualizations for ACME Games. This includes examples of File Scripting and Operating System %Scripting with adherence to proper coding ethics and security.
 
-\end{abstract}
+%\end{abstract}
 \newpage
 \tableofcontents
 \newpage
 
 \section{Virtualisation Efficiency Benefits}
 \subsection{Understanding virtualization}
-Virtualization in simple terms is the sharing of physical resources between multiple virtual machines. You can think of it as a "computer within a computer, implemented in software."\cite{2.zdroj} This is done by creating an abstraction layer over the physical hardware of the host machine so multiple computers (Virtual Machines) can run on one hardware. They can also share resources such as network cards, CPU, memory, Physical storage and others. Virtual machine is a virtual depiction of machine hardware which is maintained by a virtual machine monitor (VMware Fusion, Oracle VM VirtualBox). (Abstraction diagram here[create/find on internet])The concept of virtualization isn't new it has been here since 1960. But with the introduction of X86 Architecture and platforms, it now has been in the sighs of many companies because it provided simple seamless implementation without significant interruption to operations and low acquisition. 
+Virtualization in simple terms is the sharing of physical resources between mul- tiple virtual machines. You can think of it as a "computer within a computer, implemented in software."\cite{2.zdroj} This is done by creating an abstraction layer over the physical hardware of the host machine so multiple computers (Virtual Ma- chines) can run on one hardware. They can also share resources such as network cards, CPU, memory, Physical storage and others. The virtual machine is a vir- tual depiction of machine hardware which is maintained by a virtual machine monitor (VMware Fusion, Oracle VM VirtualBox). Concept shown in Figure ~\ref{fig:AD}. The concept of virtualization, isn’t new it has been here since 1960. But with the introduction of X86 Architecture and platforms, it has been been sought out by many companies because it provided simple seamless implementation without significant interruption to operations and low acquisition.
 \cite{1.zdroj}\cite{2.zdroj}
 
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{AbstractionDiagram.png}
+  \caption{Abstraction Diagram Sourced:\cite{17.zdroj} }
+  \label{fig:AD}
+\end{figure}
+\newpage
 \subsection{Benefits of Virtualization}
-The benefits of virtualization are considerable. Virtualization can help with security, scalability, cost cutting, efficient uses of resources and other.
-Non virtualized systems can be inefficient when non virtulzed resources aren't in use and the hardware is sitting idle without any computing task ready to run. While in virtulized system once resources become available hypervisor can allocate them accordingly to another task so the physical resources are always in use. With this comes another benefit of security and corruption prevention where in a normal non virtulized system the security and backup lay on one specific machine and user. The virtualized system security depends on the security of the whole system. This can lead to better and more secure disaster prevention where we can back up each VM, so in case of a natural disaster, there isn't any loss of data. In simple terms, virtualization helps with the growth scaleability of an organization.
+The benefits of virtualization are considerable. Virtualization can help with security, scalability, cost-cutting, efficient uses of resources and others. Non-virtualized systems can be inefficient when non-virtualized resources aren’t in use and the hardware is sitting idle without any computing tasks ready to run. While in a virtualized system once resources become available hypervisor can allocate them accordingly to another task so the physical resources are always in use. With this comes another benefit of security and corruption prevention where in normal non-virtualized systems the security and backup lay on one specific machine and user. The virtualized system security depends on the security of the whole system. This can lead to damage prevention where we can back up each VM, so in case of a natural disaster, there isn’t any loss of data. In simple terms, virtualization helps with the growth and scalability of an organization.
 
 
- For ACME Games virtualization will not only help with cost cutting and security but also with:
+For ACME Games virtualization will not only help with cost-cutting and security but also with
 \begin{enumerate}
 	\item Minimize Servers 
 	\item Reduce Hardware
@@ -66,36 +71,38 @@ Non virtualized systems can be inefficient when non virtulzed resources aren't i
 
 \cite{2.zdroj}\cite{3.zdroj}
 \subsection{Cost of virtualization and energy efficiency}
-This part delves into total cost of ownership for virtulized systems compared to standard systems and energy efficiency of medium to large organizations. We will look in to direct and indirect costs of virtualization for organizations. With real life examples of companies that went through restructuring of their servers to implement virtualization. 
+This section delves into the total cost of ownership for virtualized systems compared to standard systems and the energy efficiency of medium to large organizations. We will look into to direct and indirect costs of virtualization for organizations. Real-life examples of companies that went through a restructuring of their servers to implement virtualization.
+
 \subsubsection{Cost of virtualization}
-First we need to define what are the major direct cost categories for organization to implement virtulized system.
+First, we need to define what the major direct cost categories for an organization to implement a virtualized system are:
 \begin{enumerate}
 	\item Hardware cost
 
-	Represented as expenses that are expected to be bought so virtualization can be implemented to the system. These include physical technologies that would allow to create new virtulized system \cite{2.zdroj}
+	These are represented as expenses incurred so virtualization can be implemented in the system. Primarily physical technologies that would allow to create new virtualized system \cite{2.zdroj}
 	\item Software cost
 
-	Are expenses derived from buying and/or licensing software which allows access to virtual machines and all its  possible functions. \cite{2.zdroj}
+	These are expenses derived from buying and/or licensing software which allows access to virtual machines and all its possible functions \cite{2.zdroj}
 	\item Deployment costs
  
-	These costs are other expenses not directly associated with the concept of virtualization. Costs like disruption to existing operations 
-and space improvement.
+	These costs are expenses associated with things like disruption to existing operations and space improvement, which would be necessary for the implementation of the virtualized system.
 \end{enumerate}
-These are direct costs of implementing virtualization they can be one-time or recurring. These expenses represent the general figure for medium to large firms. These can be cut down further with the right licensing agreement and the right negotiation with hardware providers.
+These are direct costs of implementing virtualization they can be one-time or recurring. These expenses (explained later in depth) represent the general figure for medium to large firms. These can be cut down further with the right licensing agreement and the right negotiation with hardware providers.
 
-There are also second indirect costs for virtualization
+There are also indirect costs when implementing virtualization, such as:
 \begin{enumerate}
 	\item Training personnel cost
 	\item Maintenance cost
 	\item Energy cost
 \end{enumerate}
+
+\subsubsection{Direct cost}
+
 \paragraph{Hardware cost}
 
-
-The initial virtualization cost can be considered high when a classical system is already in place and working. Let's consider the Hardware cost of implementing new servers. We will look into the 2 most popular servers Which are Dell's PowerEdge R6625 and PowerEdge R7625. With these 2 servers, Dell allows extensive customization to get the best price for the best performance and energy efficiency for specific tasks. The table below shows the specifications of each server and the lowest configuration cost per 1 server.
+he initial virtualization cost can be considered high when a classical system is already in place and working. Let’s consider the Hardware cost of implementing new servers. We will look into the 2 most popular servers which are Dell’s PowerEdge R6625 and PowerEdge R7625. With these 2 servers, Dell allows extensive customization to get the best price for the best performance and energy efficiency for specific tasks. Figure ~\ref{fig:rbs.1} below shows the specifications of each server and the lowest configuration cost per server.
 \begin{figure} [h!]
   \includegraphics[scale=0.5]{ServerCost.png}
-  \caption{Table comparesen made by author. Sourced: \cite{4.zdroj}\cite{5.zdroj}\cite{6.zdroj}}
+  \caption{Table comparing servers. Made by author. Sourced: \cite{4.zdroj}\cite{5.zdroj}\cite{6.zdroj}}
   \label{fig:rbs.1}
 \end{figure}
 
@@ -103,61 +110,47 @@ The initial virtualization cost can be considered high when a classical system i
 \paragraph{Software cost}
 
 
-There are multiple virtualization software to consider. We will look into 2  different virtualization software VMware vSphere and Citrix XenServer. 
+There are multiple virtualization software to consider. We will look into 2 virtualization software VMware vSphere and Citrix XenServer.
 \begin{enumerate}
 	\item VMware vSphere
 
-Offers 2 different options vSphere standard and Foundation.
+Offers 2 options, vSphere standard and Foundation. vSphere Foundation is their flagship virtualization software which allows access to the full set of virtualization features. This software is for medium to large companies. The set price as of February 2024 is 135 USD per CPU Core. For one of the above-mentioned servers, it would come to 7200 USD Yearly. vSphere Standard is aimed at small to medium-sized companies. It offers essential virtualization capabilities. vSphere standard is priced at 50 USD per CPU core. For one of the above-mentioned servers, it comes to 2400 USD Yearly\cite{15.zdroj}
 
-
- vSphere Foundation is their flagship virtualization software which allows access to the full set of virtualization features. This software is for medium to large companies. The set price as of February 2024 is 135 USD per CPU Core. 
-
-For one of the above-mentioned server, it would come to 7200 USD Yearly
-
-vSphere Standard is aimed at small to medium-sized companies. It offers essential virtualization capabilities.
-vSpahere standard is priced at 50 USD per CPU core.
-
-For one of the above-mentioned server, it comes to 2400 USD Yearly 
 
 	\item Citrix XenServer
 	
-	Also Offers Standard and Premium Edition. Unlike vSphere, XenServer Operates on a cost per-CPU socket.
+This software also offers a Standard and Premium Edition. Unlike vSphere, XenServer Operates on a cost per CPU socket. Their standard edition is entry-level virtualization software for a lower cost; however, organizations can still benefit from Technical Support and Maintenance. The Premium version offers GPU virtualization, Dynamic Workload Balancing, Thin provisioning for shared block storage devices and other features which are essential to ACME Games. The premium version for 1-4 Sockets is 875 USD per socket per year. The standard version price for 1-4 sockets is 440 USD per socket per year. The price goes down when more sockets are  licensed.\cite{16.zdroj}
 
-Their standard edition is entry-level virtualization software for lower cost and organizations can still benefit from Technical Support and Maintenance. Nevertheless, the Premium version offers GPU virtualization, Dynamic Workload Balancing, Thin provisioning for shared block storage devices and other features which are essential to  ACME Games. 
-
-The premium version for 1-4 Sockets is 875 USD per socket per year. 
-The standard version price for 1-4 sockets is 440 USD per socket per year. 
-
-The price goes down when more sockets are licensed.
 
 \end{enumerate}
 
 
 \subsubsection{Energy efficiency}
-The cost of Energy is hard to predict due to constant economic changes. The cost of energy changes rapidly each month. However from research done by  Jukka Kommeri, Tapio Niemi and Olli Helin in their Energy Efficiency of Server Virtualization from 2012\cite{1.zdroj} shows that with correct implementation virtualization can save energy. In their words "research indicates that idle power consumption of virtualized server is close to zero" \cite{1.zdroj}.
-
+The cost of Energy is hard to predict due to constant economic changes, which can cause unpredictable price fluctuations from month to month. However, from research done by Jukka Kommeri, Tapio Niemi and Olli Helin in their Energy Efficiency of Server Virtualization from 2012 \cite{1.zdroj} shows that with correct implementation of virtualization can save energy.
 
 \paragraph{Real world example}
-As research into virtualization progresses even more we can expect that energy consumption will lower. 
-Case study done in 2010 by K. Thirupathi Rao,P. Sai Kiran and  L.S.S.Reddy(Energy Efficiency in Datacenters through 
-Virtualization: A Case Study \cite{7.zdroj}) indicetes that after virtualization datacenter obtained power improvement of 65 percent furthermore data center reduced their number of servers from 500 to 140. Practical investigation in to Croatian company done in 2012 that went through virtualization is the best example for ACME Games. They used Dell PowerEdge 2970 servers for their virtualization. Figure 2 shows lower numbers of servers with predicted growth of 0.25 server per year.\cite{2.zdroj}
+as research into virtualization continuously progresses we can expect energy consumption to lower. A case study done in 2010 by K. Thirupathi Rao,P. Sai Kiran and L.S.S.Reddy (Energy Efficiency in Datacenters through Virtualization: A Case Study  \cite{7.zdroj}) indicate that after virtualization a datacenter obtained a power improvement of 65 percent furthermore the datacenter reduced their number of servers from 500 to 140. A practical investigation into a Croatian company done in 2012 that went through virtualization is the best example for ACME Games. They used Dell PowerEdge 2970 servers for their virtualization. Figure 3 shows lower numbers of servers with predicted growth of 0.25 servers per year.\cite{2.zdroj}
 \begin{figure} [h!]
   \includegraphics[scale=0.7]{CroatiaTableTechnical.png}
   \caption{Table from: \cite{2.zdroj}}
-  \label{fig:rbs.1}
+  \label{fig:CroatianCompany}
 \end{figure}
 \newpage
-Their virtualized system yields economic energy efficiency of 72.41 percent. The energy cost of their non-virtualized system per year was 45,439.69 USD(adjusted to inflation as of 2024) while their virtualized system 12,535.19 USD (Adjusted to inflation as of 2024). This is 27.59 percent less energy consumed per year.
+Their virtualized system yields an economic energy efficiency of 72.41 percent. The energy cost of their non-virtualized system per year was 45,439.69 USD(adjusted to inflation as of 2024) while their virtualized system was 12,535.19 USD (Adjusted to inflation as of 2024). This is 27.59 percent less energy consumed per year.
 
-Overall the economic effect of virtualization for the company was 57.63 percent.
+Overall, the economic effect of virtualization for the company was 57.63 percent.
 
 
-There it is safe to assume that with a correct implementation of virtualization, ACME Games can save on energy consumption, resources and capital.
+Therefore, it is safe to assume that with a correct implementation of virtualization, ACME Games can save on energy consumption, resources and capital.
 
+\newpage
 \section{Security Issues}
-Any technological enterprise's biggest concern is the mitigation of unauthorised access to company data. This unauthorised access can be within the company's corporate hierarchies or a malicious attack by a third party. While access permission within a company's structure is achieved by setting up correct entry dispensation and secured data movement infrastructure within the company's internal systems, third-party attacks are harder to prognosticate, therefore establishing robust threat assessment and a durable security panel is exceedingly important compared to other parts of virtualization.
+Any technological enterprise’s biggest concern is the mitigation of unauthorized access to company data. This unauthorized access can be within the company’s corporate hierarchies or a malicious attack by a third party. While access per- mission within a company’s structure is achieved by setting up correct entry dispensation and secured data movement infrastructure within the company’s internal systems, third-party attacks are harder to prognosticate, therefore es- establishing robust threat assessment and a durable security panel is exceedingly important compared to other parts of virtualization.
+
 \subsection{Operating system security issues}
-In this day and age, we can find operating systems everywhere. This leads to day-to-day exponential improvement in developing malicious algorithms to infect our Operating system. Multiple common vulnerabilities can be exploited
+In today’s technological world operating systems are found everywhere. This results in daily exponential improvements in developing malicious techniques to infect our Operating systems.
+Here are some common vulnerabilities that can be exploited:
+
 \begin{enumerate}
 	\item Buffer Overflow
 	\item Code Injections
@@ -165,28 +158,163 @@ In this day and age, we can find operating systems everywhere. This leads to day
 	\item Denial of Service
 	\item Zero-Day
 \end{enumerate}
-A great example is Microsoft's vulnerability issue from 2023 which was patched in February 2024 and tracked under code CVE-2024-21338. This issue affected the kernel mode in different versions of windows 10 and 11. This exploit used CWE-822 Weaknes where attacker supsedies internal pointer for memory location which wasn't expected. If the pointer dereference in to write the attacker can start modification of variables or carry out code execution.On the other hand direfferencing pointer to read allows reading of sensitive data. This issue fall in to Zero-Day exploit.
+A great example is Microsoft’s vulnerability issue from 2023 which was patched in February 2024 and tracked under code CVE-2024-21338. This issue affected the kernel mode in different versions of Windows 10 and 11. This exploit used the CWE-822 weakness where the attacker supplies an internal pointer for memory location which wasn’t expected. If the pointer dereferences into write, the attacker can start modifying the variables or carry out code execution. On the other hand, dereferencing pointer to read allows the reading of sensitive data. This issue falls into the Zero-Day exploit. This CWE-822 issue can be exploited in any language that uses pointers (c/c++, assembly...)\cite{8.zdroj}\cite{9.zdroj}
+
+\vspace{1.5cm}
+his part explores the most common operating system security issues.
+
+\paragraph{Buffer overflow}occurs when more information is written to the buffer beyond its memory. Buffer overflow attacks on a system aim to modify the state of memory so that a third party can execute code that allows it to take over the machine. This is done by precisely inputting data so that the buffer would copy this information to the adjacent location in memory.
 
 
-This part dives into the most common security issues being exploited. 
+\paragraph{Code Injections} is a security exploitation where a program misinterprets input data as part of its code. Figuratively the attacker injects code into the run of the program and changes its behavior to gain access to the machine.
 
-\subsubsection{Buffer Overflow}
-A buffer overflow occurs when more information is written to the buffer beyond its memory. Buffer overflow attack on a system aims to modify the stat of memory so a third party can execute code which would allow them to 
-\subsubsection{Code Injections}
-\subsubsection{Privilege Escalation}
-\subsubsection{Denial of Service}
-\subsubsection{Zero-Day}
+\paragraph{Privilege Escalation}  is accomplished by exploiting systems or a program’s vulnerability to gradually gain access to different resources and modes of the operating system. This way attackers can go from user mode with the least amount of privilege to the kernel mode to change the behavior of the OS.
+
+\paragraph{Denial of Service} attacks are meant to disrupt the network for the intended user so they cannot use it. In these attacks a third party floods the network with a large amount of requests which it can’t handle, eventually shutting the network down.
+
+
+\paragraph{Zero-Day} exploitation of a software issue that developers don’t know about. This isn’t any specific common issue being exploited. In this scenario, attackers are trying to find software vulnerabilities faster than developers can find them.
+ 
+
 \subsection{Virtualization security issues}
+he benefits of virtualization on security are vast. As virtualization progresses, new research into virtualized systems issues emerges. Although this research suggests a new way of thinking about security, attackers also expand their roster of knowledge. That’s why it is impossible to cover every security issue.
 
+There are two ways of thinking when creating threat assessments in virtualization, one would be considered hypothetical in many cases, for example, many of the physical components are made in countries with no regard for cyber security. In this case, we haven’t seen any considerable foreign intervention in the production of hardware. Therefore, we are going to look into the real threats in virtualization. \cite{11.zdroj}
+
+\subsection{Virtualization threat assessment}
+Here we identify three major routes that third parties can use to exploit virtualized systems.
 \begin{enumerate}
-	\item 
-	\item 
-	\item 
+\item Hypervisor-based Attacks
+\item VM-based Attacks
+\item VM Image Attacks
 \end{enumerate}
+As shown in figure ~\ref{fig:attackVector}, all these routes branch out into other subsets of malicious intrusions. \cite{13.zdroj}\cite{12.zdroj}
+\newpage
+\begin{figure} [h!]
+  \includegraphics[scale=0.65]{AttackVector.png}
+  \caption{Graph from: \cite{12.zdroj}}
+  \label{fig:attackVector}
+\end{figure}
+
+
+We are going to look into the most common virtualization attacks over the  years and explain briefly how we can prevent such issues from arising.
+
+\subsubsection{Most common security risks in virtualized environment }
+\paragraph{VM Sprawl}
+Virtual machine sprawl occurs when an unmanaged number of VMs are created for one specific task and forgotten about. This leads to a waste of resources as already existing VMs take up resources that aren’t in use and could be utilized elsewhere. Also, if VMs are left unchecked for prolonged periods of time, vulnerabilities can be created by out-of-date VMs which can be used to access the inner system, resulting in the potential loss of sensitive data. This can be mitigated by creating VM lifecycle insurance or by strict laws under which VMs can be created, managed and terminated.
+
+\paragraph{Malware attacks}
+VMs like any other computing technology are susceptible to malware attacks. This can be a bigger danger in a virtualized environment when users of VMs don’t have proper security training which can lead to the infection of a VM. This wouldn’t be a significant in a normal system but in virtualization, this can lead to the spread of malicious software to the host machine and all other VMs that run on that same physical machine. This can be mitigated by setting up Firewalls, Host intrusion prevention systems and anti-virus/spyware.
+\paragraph{Oragnization issues}
+Virtualization is dominating the technical aspects of companies around the world. That is why all the issues above are being closely monitored by software providers, cyber security companies and other parties. When implementing a virtualized system, the IT corporate structure is often neglected, the additional workload created by the implementation cannot be left to the existing IT team as this could lead to catastrophic scenarios. That’s why the IT department needs to maintain great standards and integrity in areas like Monitoring VMs, setting up access control, separation of duties, hardening and making sure that the change of management is seamless.\cite{14.zdroj}  
+
+
+ 
+
+
 \newpage
 \section{File System Scripting}
+This section explains the thinking and reason behind the first bash script. With this script, we aimed and successfully created two groups of users each group had a userxy who acted as a supervisor. These groups had their own folders where only the group members could access them and userxy. Each user had their own folder created in their group folder and only that specific user and userxy could read write and execute anything in this personal folder.
+
+
+
+
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.65]{1st_script_1st_part.png}
+  \caption{First part of first script.}
+  \label{fig}
+\end{figure}
+This is the 1st part of the script. Here we run everything with sudo to make sure we don't get any permission denied errors.
+
+sudo groupadd <name> creates 2 groups. With that done, we create two directories for each group with the command sudo mkdir <name>.  By stating /home/group01Project we ensured that the directories were created in the home folder of Ubuntu. Next, we create userxy and add him to each group. After that, we set permissions for each group and for the userxy. For this, we used the Acces Control List first we set read, write, execute (later rwx) permission for each group for their home folder. These permissions were general so they can't access any new folders created in their home directory. Then we set rwx permissions which are initiated for new folders created in the group home folder. These permissions were given to userxy. 
+\begin{figure} [h!]
+  \includegraphics[scale=0.65]{1st_script_2nd_part.png}
+  \caption{Seconf part of first script.}
+  \label{fig}
+\end{figure}
+\newpage
+In the second part of the script, we created two arrays which hold the names of each user who is in the specific group. We run through the array with a for loop.
+\begin{enumerate}
+	\item sudo adduser \textdollar users01
+
+		Creates the specific user whose name is in the array. We used adduser to create an account with a more interactive experience and full features rather then useradd where we would need to specify everything.
+
+	\item sudo usermod -a -G group01 \textdollar users01
+	With this line, we add the user to the specific group
+
+	\item sudo mkdir /home/group01Project/ \textdollar users01
+
+		this line creates name specific folder in the group01Project
+
+	\item sudo setfacl -m d:u:\textdollar users01:rwx /home/group01Project/\textdollar users01
+
+		Here we set specific inherited rwx permissions for the users personal folder  
+
+	\item echo "created user \textdollar users01"
+
+		Prints the name of the user which was created
+\end{enumerate}
+\newpage
+\subsection{Testing}
+To test if the permissions are correct we run to set of tests. One was using the command getfacl which are shown in Figures ~\ref{group02getfacl}~\ref{group01getfacl}~\ref{aclUser}.
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{getfacl_group01Project.png}
+  \caption{ACL Group01}
+  \label{group01getfacl}
+\end{figure}
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{getfacl_group02Project.png}
+  \caption{ACL Group02}
+  \label{group02getfacl}
+\end{figure}
+
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{getfacl_user01.png}
+  \caption{ACL User01}
+  \label{aclUser}
+\end{figure}
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{2nd_test.png}
+  \caption{Full script}
+  \label{fig}
+\end{figure}
+
+\newpage
+\subsection{Whole Script}
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{1st_script_whole.png}
+  \caption{Full script}
+  \label{fig}
+\end{figure}
 \newpage
 \section{Operating System Scripting}
+For this script, we created a bash script which would back up the files in folders of group01 and group02. For the backup file, we choose to save it in the TAR file format. The tar file is an archive saved in the tape archive format. It contains both group01 and group02 folders.\cite{18.zdroj}
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{2nd_script.png}
+  \caption{Full script}
+  \label{fig}
+\end{figure}
+In this second script, we first start by informing the user that we are initiating a backup group01 and group02 are variables which hold the location of their respective folders. BackupName variables is the name of the backup which changes based on the day month and year when it was created.
+Next we specify that we want to create a tar file tar -czvf /where-we-want-to-backup /location-of-backup-file.
+This is what this command is doing 
+\begin{itemize}
+\item c -  (--create) creates new tar file
+\item z - tells tar to compress the file using gzip
+\item v - (--verbose) displays files being processed by tar
+\item f - (-- file=archive=name) this allows us to specify archive file name
+\end{itemize}
+To schedule and automate the task of backing up the files we used cron. Cron is a command-line utility task scheduler. By using command crontab -e in terminal we open up the scheduler. The scheduler runs on sipmle  
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{crontab.png}
+  \caption{crontab task scheduling}
+  \label{fig}
+\end{figure}
 \newpage
 \section{Conclusions}
 \bibliography{References}
