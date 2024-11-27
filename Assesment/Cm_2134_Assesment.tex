@@ -76,10 +76,10 @@ This section delves into the total cost of ownership for virtualized systems com
 \subsubsection{Cost of virtualization}
 First, we need to define what the major direct cost categories for an organization to implement a virtualized system are:
 \begin{enumerate}
-	\item Hardware cost
+	\item Hardware cost\ref{hdcost}
 
 	These are represented as expenses incurred so virtualization can be implemented in the system. Primarily physical technologies that would allow to create new virtualized system \cite{2.zdroj}
-	\item Software cost
+	\item Software cost\ref{sfcost}
 
 	These are expenses derived from buying and/or licensing software which allows access to virtual machines and all its possible functions \cite{2.zdroj}
 	\item Deployment costs
@@ -97,9 +97,9 @@ There are also indirect costs when implementing virtualization, such as:
 
 \subsubsection{Direct cost}
 
-\paragraph{Hardware cost}
+\paragraph{Hardware cost}\label{hdcost}
 
-he initial virtualization cost can be considered high when a classical system is already in place and working. Let’s consider the Hardware cost of implementing new servers. We will look into the 2 most popular servers which are Dell’s PowerEdge R6625 and PowerEdge R7625. With these 2 servers, Dell allows extensive customization to get the best price for the best performance and energy efficiency for specific tasks. Figure ~\ref{fig:rbs.1} below shows the specifications of each server and the lowest configuration cost per server.
+The initial virtualization cost can be considered high when a classical system is already in place and working. Let’s consider the Hardware cost of implementing new servers. We will look into the 2 most popular servers which are Dell’s PowerEdge R6625 and PowerEdge R7625. With these 2 servers, Dell allows extensive customization to get the best price for the best performance and energy efficiency for specific tasks. Figure ~\ref{fig:rbs.1} below shows the specifications of each server and the lowest configuration cost per server.
 \begin{figure} [h!]
   \includegraphics[scale=0.5]{ServerCost.png}
   \caption{Table comparing servers. Made by author. Sourced: \cite{4.zdroj}\cite{5.zdroj}\cite{6.zdroj}}
@@ -107,29 +107,29 @@ he initial virtualization cost can be considered high when a classical system is
 \end{figure}
 
 \newpage
-\paragraph{Software cost}
+\paragraph{Software cost}\label{sfcost}
 
 
 There are multiple virtualization software to consider. We will look into 2 virtualization software VMware vSphere and Citrix XenServer.
 \begin{enumerate}
 	\item VMware vSphere
 
-Offers 2 options, vSphere standard and Foundation. vSphere Foundation is their flagship virtualization software which allows access to the full set of virtualization features. This software is for medium to large companies. The set price as of February 2024 is 135 USD per CPU Core. For one of the above-mentioned servers, it would come to 7200 USD Yearly. vSphere Standard is aimed at small to medium-sized companies. It offers essential virtualization capabilities. vSphere standard is priced at 50 USD per CPU core. For one of the above-mentioned servers, it comes to 2400 USD Yearly\cite{15.zdroj}
+Offers 2 options, vSphere standard and Foundation. vSphere Foundation is their flagship virtualization software which allows access to the full set of virtualization features. This software is for medium to large companies. The set price as of February 2024 is 135 USD per CPU Core. For one of the above-mentioned servers, it would come to 7200 USD Yearly. vSphere Standard is aimed at small to medium-sized companies. It offers essential virtualization capabilities. vSphere standard is priced at 50 USD per CPU core. For one of the above-mentioned servers, it comes to 2400 USD Yearly\cite{15.zdroj}\cite{21.zdroj}
 
 
 	\item Citrix XenServer
 	
-This software also offers a Standard and Premium Edition. Unlike vSphere, XenServer Operates on a cost per CPU socket. Their standard edition is entry-level virtualization software for a lower cost; however, organizations can still benefit from Technical Support and Maintenance. The Premium version offers GPU virtualization, Dynamic Workload Balancing, Thin provisioning for shared block storage devices and other features which are essential to ACME Games. The premium version for 1-4 Sockets is 875 USD per socket per year. The standard version price for 1-4 sockets is 440 USD per socket per year. The price goes down when more sockets are  licensed.\cite{16.zdroj}
+This software also offers a Standard and Premium Edition. Unlike vSphere, XenServer Operates on a cost per CPU socket. Their standard edition is entry-level virtualization software for a lower cost; however, organizations can still benefit from Technical Support and Maintenance. The Premium version offers GPU virtualization, Dynamic Workload Balancing, Thin provisioning for shared block storage devices and other features which are essential to ACME Games. The premium version for 1-4 Sockets is 875 USD per socket per year. The standard version price for 1-4 sockets is 440 USD per socket per year. The price goes down when more sockets are  licensed.\cite{16.zdroj}\cite{21.zdroj}
 
 
 \end{enumerate}
 
 
 \subsubsection{Energy efficiency}
-The cost of Energy is hard to predict due to constant economic changes, which can cause unpredictable price fluctuations from month to month. However, from research done by Jukka Kommeri, Tapio Niemi and Olli Helin in their Energy Efficiency of Server Virtualization from 2012 \cite{1.zdroj} shows that with correct implementation of virtualization can save energy.
+The cost of Energy is hard to predict due to constant economic changes, which can cause unpredictable price fluctuations from month to month. However, from research done by Jukka Kommeri, Tapio Niemi and Olli Helin in their Energy Efficiency of Server Virtualization from 2012 \cite{1.zdroj} shows that with correct implementation of virtualization can save a significant amount of energy.
 
 \paragraph{Real world example}
-as research into virtualization continuously progresses we can expect energy consumption to lower. A case study done in 2010 by K. Thirupathi Rao,P. Sai Kiran and L.S.S.Reddy (Energy Efficiency in Datacenters through Virtualization: A Case Study  \cite{7.zdroj}) indicate that after virtualization a datacenter obtained a power improvement of 65 percent furthermore the datacenter reduced their number of servers from 500 to 140. A practical investigation into a Croatian company done in 2012 that went through virtualization is the best example for ACME Games. They used Dell PowerEdge 2970 servers for their virtualization. Figure 3 shows lower numbers of servers with predicted growth of 0.25 servers per year.\cite{2.zdroj}
+as research into virtualization continuously progresses we can expect energy consumption to lower. A case study done in 2010 by K. Thirupathi Rao,P. Sai Kiran and L.S.S.Reddy (Energy Efficiency in Datacenters through Virtualization: A Case Study  \cite{7.zdroj}) indicate that after virtualization a datacenter obtained a power improvement of 65 percent furthermore the datacenter reduced their number of servers from 500 to 140. A practical investigation into a Croatian company done in 2012 that went through virtualization is the best example for ACME Games. They used Dell PowerEdge 2970 servers for their virtualization. Figure \ref{fig:CroatianCompany} shows lower numbers of servers with predicted growth of 0.25 servers per year.\cite{2.zdroj}
 \begin{figure} [h!]
   \includegraphics[scale=0.7]{CroatiaTableTechnical.png}
   \caption{Table from: \cite{2.zdroj}}
@@ -145,7 +145,7 @@ Therefore, it is safe to assume that with a correct implementation of virtualiza
 
 \newpage
 \section{Security Issues}
-Any technological enterprise’s biggest concern is the mitigation of unauthorized access to company data. This unauthorized access can be within the company’s corporate hierarchies or a malicious attack by a third party. While access per- mission within a company’s structure is achieved by setting up correct entry dispensation and secured data movement infrastructure within the company’s internal systems, third-party attacks are harder to prognosticate, therefore es- establishing robust threat assessment and a durable security panel is exceedingly important compared to other parts of virtualization.
+Any technological enterprise’s biggest concern is the mitigation of unauthorized access to company data. This unauthorized access can be within the company’s corporate hierarchies or a malicious attack by a third party. While access per- mission within a company’s structure is achieved by setting up correct access dispensation and secured data movement infrastructure within the company’s internal systems, third-party attacks are harder to prognosticate, therefore es- establishing robust threat assessment and a durable security panel is exceedingly important compared to other parts of virtualization.
 
 \subsection{Operating system security issues}
 In today’s technological world operating systems are found everywhere. This results in daily exponential improvements in developing malicious techniques to infect our Operating systems.
@@ -160,8 +160,8 @@ Here are some common vulnerabilities that can be exploited:
 \end{enumerate}
 A great example is Microsoft’s vulnerability issue from 2023 which was patched in February 2024 and tracked under code CVE-2024-21338. This issue affected the kernel mode in different versions of Windows 10 and 11. This exploit used the CWE-822 weakness where the attacker supplies an internal pointer for memory location which wasn’t expected. If the pointer dereferences into write, the attacker can start modifying the variables or carry out code execution. On the other hand, dereferencing pointer to read allows the reading of sensitive data. This issue falls into the Zero-Day exploit. This CWE-822 issue can be exploited in any language that uses pointers (c/c++, assembly...)\cite{8.zdroj}\cite{9.zdroj}
 
-\vspace{1.5cm}
-his part explores the most common operating system security issues.
+\vspace{0.5cm}
+This part explores the most common operating system security issues.
 
 \paragraph{Buffer overflow}occurs when more information is written to the buffer beyond its memory. Buffer overflow attacks on a system aim to modify the state of memory so that a third party can execute code that allows it to take over the machine. This is done by precisely inputting data so that the buffer would copy this information to the adjacent location in memory.
 
@@ -177,7 +177,7 @@ his part explores the most common operating system security issues.
  
 
 \subsection{Virtualization security issues}
-he benefits of virtualization on security are vast. As virtualization progresses, new research into virtualized systems issues emerges. Although this research suggests a new way of thinking about security, attackers also expand their roster of knowledge. That’s why it is impossible to cover every security issue.
+The benefits of virtualization on security are vast. As virtualization progresses, new research into virtualized systems issues emerges. Although this research suggests a new way of thinking about security, attackers also expand their roster of knowledge. That’s why it is impossible to cover every security issue.
 
 There are two ways of thinking when creating threat assessments in virtualization, one would be considered hypothetical in many cases, for example, many of the physical components are made in countries with no regard for cyber security. In this case, we haven’t seen any considerable foreign intervention in the production of hardware. Therefore, we are going to look into the real threats in virtualization. \cite{11.zdroj}
 
@@ -241,6 +241,7 @@ In the second part of the script, we created two arrays which hold the names of 
 		Creates the specific user whose name is in the array. We used adduser to create an account with a more interactive experience and full features rather then useradd where we would need to specify everything.
 
 	\item sudo usermod -a -G group01 \textdollar users01
+
 	With this line, we add the user to the specific group
 
 	\item sudo mkdir /home/group01Project/ \textdollar users01
@@ -276,11 +277,12 @@ To test if the permissions are correct we run to set of tests. One was using the
   \caption{ACL User01}
   \label{aclUser}
 \end{figure}
+For the second test, we tried to create and access different folders with different users. As shown in Figure \ref{2test}
 
 \begin{figure} [h!]
   \includegraphics[scale=0.6]{2nd_test.png}
-  \caption{Full script}
-  \label{fig}
+  \caption{2nd Test}
+  \label{2test}
 \end{figure}
 
 \newpage
@@ -294,13 +296,23 @@ To test if the permissions are correct we run to set of tests. One was using the
 \section{Operating System Scripting}
 For this script, we created a bash script which would back up the files in folders of group01 and group02. For the backup file, we choose to save it in the TAR file format. The tar file is an archive saved in the tape archive format. It contains both group01 and group02 folders.\cite{18.zdroj}
 
+
 \begin{figure} [h!]
-  \includegraphics[scale=0.6]{2nd_script.png}
-  \caption{Full script}
+  \includegraphics[scale=0.6]{user_notfication.png}
+  \caption{Notify Users}
   \label{fig}
 \end{figure}
-In this second script, we first start by informing the user that we are initiating a backup group01 and group02 are variables which hold the location of their respective folders. BackupName variables is the name of the backup which changes based on the day month and year when it was created.
-Next we specify that we want to create a tar file tar -czvf /where-we-want-to-backup /location-of-backup-file.
+This part of the script sends a notification to users that the backup has been initiated. For this, we used the notify-send command. Due to the nature of the script running in root and being run as a root cron job, we need to find a specific Dbus. D-Bus is a communication channel between Input/Output device and the processor. To ensure that all the users get the message, we run a loop that goes through each user's name. For each user we get the id of the user to notify.
+Then with sudu -u  to run a command as a specific user. Then we find the Dbus of a particular user thanks to its ID and run the command notify-send to show a poup message. We leave this message for three seconds by specifying it -t 3000.\cite{19.zdroj}\cite{20.zdroj}
+
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{txt.png}
+  \caption{Tar file backup}
+  \label{fig}
+\end{figure}
+In this second part, group01 and group02 are variables which hold the location of their respective folders. BackupName variables is the name of the backup which changes based on the day month and year when it was created.
+As is the infoName which holds the logs of the backup. Next, we specify that we want to create a tar file tar -czvf /where-we-want-to-backup /location-of-backup-file>> where-we-want-to-write-the-logs.
 This is what this command is doing 
 \begin{itemize}
 \item c -  (--create) creates new tar file
@@ -308,15 +320,31 @@ This is what this command is doing
 \item v - (--verbose) displays files being processed by tar
 \item f - (-- file=archive=name) this allows us to specify archive file name
 \end{itemize}
-To schedule and automate the task of backing up the files we used cron. Cron is a command-line utility task scheduler. By using command crontab -e in terminal we open up the scheduler. The scheduler runs on sipmle  
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{what_txt.png}
+  \caption{Backup Logs}
+  \label{logs}
+\end{figure}
 
 \begin{figure} [h!]
-  \includegraphics[scale=0.6]{crontab.png}
+  \includegraphics[scale=0.6]{root_crontab.png}
   \caption{crontab task scheduling}
   \label{fig}
 \end{figure}
+In this third part, we used cron to schedule and automate the task of backing up the files. Cron is a command-line utility task scheduler. We open up the scheduler by using the command crontab -e in the terminal. We run the command as a root to make sure it is accessible and is executed everywhere. The scheduler runs on simple syntax where * represents minutes, hours, days of the week, month and year. After the specific time, it is followed by a command that will run. For this, we run our backup script. For our use case, we made it so the backup script runs every day at 23:00. As evidenced below in the figure~\ref{fig1}~\ref{fig2}
+\begin{figure} [h!]
+  \includegraphics[scale=0.5]{notification_send_user01.png}
+  \caption{Desktop User01 at 23:00}
+  \label{fig1}
+\end{figure}
+
+\begin{figure} [h!]
+  \includegraphics[scale=0.6]{backupfolder.png}
+  \caption{Backup folder after backup script was initiated}
+  \label{fig2}
+\end{figure}
+a
 \newpage
-\section{Conclusions}
 \bibliography{References}
 \bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý in
 
